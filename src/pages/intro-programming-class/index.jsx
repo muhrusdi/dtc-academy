@@ -9,7 +9,10 @@ import logoIg from "../../images/logo-ig.svg"
 import logoTw from "../../images/logo-tw.svg"
 
 const Index = () => {
-  const jQuery = useJquery()
+  let jQuery
+  if (typeof window !== "undefined") {
+    jQuery = useJquery()
+  }
   useEffect(() => {
     let $ = jQuery
     if (typeof $ !== "undefined") {
